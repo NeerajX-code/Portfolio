@@ -7,11 +7,13 @@ import { Resend } from "resend";
 dotenv.config();
 
 const app = express();
+
 app.use(
   cors({
     origin: ["http://localhost:5173", "https://portfolio-neeraj.onrender.com"],
   })
 );
+app.use(express.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
