@@ -1,0 +1,124 @@
+.journey {
+  padding: $section-padding;
+  background: $dark-bg;
+  color: $text-light;
+
+  &__title {
+    text-align: center;
+    font-size: clamp(1.8rem,3vw,3rem);
+    margin-bottom: 4rem;
+    font-weight: 600;
+  }
+
+  &__container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+
+    &-progress {
+      width: 100%;
+      height: 0%;
+      background: $accent;
+    }
+  }
+
+  &__milestones {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__item {
+    position: relative;
+    width: 50%;
+
+    &.left {
+      align-self: flex-start;
+      text-align: right;
+
+      .journey__content {
+        margin-right: 2rem;
+      }
+    }
+
+    &.right {
+      align-self: flex-end;
+      text-align: left;
+
+      .journey__content {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &__content {
+    background: $card-bg;
+    padding: $card-padding;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    h3 {
+      font-size: $font-medium;
+      margin-bottom: 0.5rem;
+      color: $accent;
+    }
+
+    p {
+      font-size: $font-small;
+      color: $text-muted;
+      margin-bottom: 1rem;
+    }
+
+    .journey__link {
+      font-size: 0.9rem;
+      color: $accent;
+      margin-right: 1rem;
+      text-decoration: none;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0%;
+        height: 1px;
+        background: $accent;
+        transition: width 0.3s ease;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+
+
+  // 📱 Responsive
+  @media (max-width: 768px) {
+    &__line {
+      left: 20px;
+      transform: none;
+    }
+
+    &__item {
+      width: 100%;
+      text-align: left !important;
+
+      .journey__content {
+        margin: 0 0 0 2rem !important;
+      }
+
+    }
+  }
+}

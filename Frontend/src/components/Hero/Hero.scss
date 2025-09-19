@@ -1,0 +1,35 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $dark-bg;
+  color: $text-light;
+  text-align: center;
+  padding: clamp(1rem,1.5vw,1.5rem);
+
+  h1 {
+    max-width: 900px;
+    font-size: clamp(2rem,3vw,3rem);
+
+    span {
+      color: $accent;
+    }
+  }
+
+  p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: $text-muted;
+  }
+
+  .cta {
+    padding: 0.7rem 1.5rem;
+    border: 2px solid $accent;
+    border-radius: 30px;
+    text-decoration: none;
+    color: $accent;
+    transition: 0.3s;
+  }
+}

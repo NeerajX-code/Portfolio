@@ -1,0 +1,118 @@
+.journey {
+  padding: 5rem 2rem;
+  position: relative;
+  background: radial-gradient(circle at top left, #0f0f0f, #000);
+  color: #fff;
+  overflow: hidden;
+}
+.journey__title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  background: linear-gradient(90deg, #ff4d4d, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.journey__container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.journey__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.journey__line-progress {
+  width: 100%;
+  background: linear-gradient(to bottom, #ff4d4d, #ff8c00);
+  height: 0%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ff4d4d;
+}
+.journey__milestones {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.journey__item {
+  width: 50%;
+  padding: 2rem;
+  position: relative;
+}
+.journey__item.left {
+  text-align: right;
+  margin-left: 0;
+  margin-right: auto;
+}
+.journey__item.left .journey__content {
+  margin-right: 2rem;
+}
+.journey__item.right {
+  text-align: left;
+  margin-left: auto;
+}
+.journey__item.right .journey__content {
+  margin-left: 2rem;
+}
+.journey__content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
+}
+.journey__content:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+.journey__content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ff8c00;
+}
+.journey__content p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+.journey__content .links {
+  margin-top: 1rem;
+}
+.journey__content .links .journey__link {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  background: #ff4d4d;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+.journey__content .links .journey__link:hover {
+  background: #ff8c00;
+  box-shadow: 0 0 10px #ff8c00;
+}
+.journey__dot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ff4d4d;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.journey__icon {
+  width: 60px;
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=Journey.css.map */

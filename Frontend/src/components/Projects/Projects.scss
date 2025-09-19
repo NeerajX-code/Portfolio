@@ -1,0 +1,30 @@
+.projects {
+  background: $dark-bg;
+  color: $text-light;
+  padding: 5rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: $accent;
+  }
+
+  .projects-grid {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+
+    @media (max-width:1050px) {
+      width: 100%;
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width:430px) {
+    padding: 3.5rem 1.5rem;
+  }
+
+}
