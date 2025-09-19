@@ -8,7 +8,7 @@ function About() {
     <section id="about" className="about_wrapper">
       <section className="about">
         <motion.img
-          src="https://ik.imagekit.io/nkde9n0dc/075a8f89-645b-4129-a35a-5f39ca02f442__uoQu9icv?updatedAt=1754316355060"
+          src="https://ik.imagekit.io/nkde9n0dc/Neeraj%20Rathore.jpg?updatedAt=1758267710980"
           alt="Profile"
           className="profile-pic"
           whileHover={{ scale: 1.1 }}
