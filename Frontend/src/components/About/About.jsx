@@ -7,12 +7,15 @@ function About() {
   return (
     <section id="about" className="about_wrapper">
       <section className="about">
+
+        <div className="profile-div">
         <motion.img
           src="https://ik.imagekit.io/nkde9n0dc/Neeraj%20Rathore.jpg?updatedAt=1758267710980"
           alt="Profile"
           className="profile-pic"
           whileHover={{ scale: 1.1 }}
         />
+        </div>
         <motion.div
           className="about-text"
           initial={{ opacity: 0, x: -50 }}
