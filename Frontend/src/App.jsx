@@ -14,7 +14,7 @@ function App() {
     const checkServer = async () => {
       if (!isServerLive) {
         try {
-          const { data } = await axios.get('/health');
+          const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/health`);
           console.log(data);
           if (data) setLive(true);
         } catch (error) {

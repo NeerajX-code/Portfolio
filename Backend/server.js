@@ -1,5 +1,4 @@
 import express from "express";
-import path from "path";
 import cors from "cors";
 import dotenv from "dotenv";
 import validator from "validator";
@@ -8,18 +7,16 @@ import { Resend } from "resend";
 dotenv.config();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://portfolio-neeraj.onrender.com"],
+  })
+);
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.get("/health", async (req, res) => {
   res.status(200).json({ message: "server is running." });
-});
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // ✅ Contact endpoint
