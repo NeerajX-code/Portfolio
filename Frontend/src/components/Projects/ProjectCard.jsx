@@ -21,7 +21,7 @@ function ProjectCard({ p }) {
     <AnimatePresence mode="wait">
       <motion.div
         key={p.id}
-        className="project-card"
+        className={`project-card project-card-${p.id}`}
         variants={cardVariants}
         initial="hidden"
         whileInView="visible"
@@ -59,6 +59,21 @@ function ProjectCard({ p }) {
           >
             {p.description}
           </motion.p>
+
+          {
+            p.note && (
+               <motion.p
+            className="project-card__note"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+          >
+            Note: {p.note}
+          </motion.p>
+            )
+          }
+
+         
 
           <motion.ul
             className="tag-list"

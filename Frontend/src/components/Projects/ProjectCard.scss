@@ -1,4 +1,5 @@
 .project-card {
+  max-width: 400px;
   background: $card-bg;
   border: 1px solid rgba($accent, 0.5);
   border-radius: 6px;
@@ -10,6 +11,10 @@
   flex-direction: column;
   gap: 1rem;
 
+  @media (min-width:1600px) {
+    max-width: clamp(500px, 20vw, 600px);
+  }
+
   &:hover {
     border-color: $accent;
     box-shadow: $shadow-glow;
@@ -17,6 +22,7 @@
 
   &__media {
     flex: 0 0 auto;
+
     img,
     .media-placeholder {
       width: 100%;
@@ -31,6 +37,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+
     h3 {
       flex: 0 0 auto;
       font-size: $font-medium;
@@ -42,8 +49,17 @@
       flex: 1;
       font-size: $font-small;
       color: $text-muted;
-      margin-bottom: 1rem;
       line-height: 1.5;
+    }
+
+    .project-card__note {
+      width: 100%;
+      font-size: clamp(0.8rem, 1vw, .9rem);
+      color: rgba(255, 255, 255, 0.596);
+      margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
+      margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
+      background-color: rgba(29, 27, 27, 0.252);
+      padding: clamp(0.5rem, 1vw, .8rem);
     }
   }
 
@@ -51,12 +67,13 @@
     flex: 1;
     display: flex;
     flex-wrap: wrap;
+    align-content: baseline;
     gap: 0.5rem;
     margin-bottom: 1rem;
 
     li {
       height: fit-content;
-      list-style: none;  
+      list-style: none;
       background: rgba($accent, 0.15);
       color: $accent;
       padding: 0.3rem 0.6rem;
@@ -102,5 +119,16 @@
         }
       }
     }
+  }
+}
+
+
+@media (min-width:650px) {
+  .project-card-1 {
+    justify-self: end;
+  }
+
+  .project-card-2 {
+    justify-self: start;
   }
 }

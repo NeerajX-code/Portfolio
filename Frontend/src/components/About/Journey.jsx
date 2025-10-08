@@ -16,11 +16,11 @@ const milestones = [
       { title: "Hiroki Design", url: "https://neerajx-code.github.io/Hiroki/" }
     ]
   },
-  {
-    title: "JavaScript Era",
-    desc: "Discovered the power of JavaScript. Built interactive projects, dashboards, and mini-apps that felt alive.",
-    links: [{ title: "Productivity Dashboard", url: "https://example.com" }]
-  },
+  // {
+  //   title: "JavaScript Era",
+  //   desc: "Discovered the power of JavaScript. Built interactive projects, dashboards, and mini-apps that felt alive.",
+  //   links: [{ title: "Productivity Dashboard", url: "https://example.com" }]
+  // },
   {
     title: "Object-Oriented Projects",
     desc: "Applied OOP concepts to structure projects with scalability in mind — creating apps like a full-featured Music Player.",
