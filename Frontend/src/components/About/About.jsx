@@ -33,6 +33,7 @@ function About() {
             <div className="skill">React</div>
             <div className="skill">Node.js</div>
             <div className="skill">Gen AI</div>
+            <div className="skill">RESTful APIs</div>
             <div className="skill">Socket.io</div>
           </div>
         </motion.div>
