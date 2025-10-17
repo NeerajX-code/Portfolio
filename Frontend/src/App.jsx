@@ -9,6 +9,7 @@ const Hero = lazy(() => import("./components/Hero/Hero"));
 const About = lazy(() => import("./components/About/About"));
 const Projects = lazy(() => import("./components/Projects/Projects"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
+const Loader = lazy(() => import("./components/Loader/Loader"));
 
 function App() {
   const [isServerLive, setLive] = useState(false);
@@ -39,7 +40,7 @@ function App() {
 
   return (
     <>
-      <Suspense fallback={<div style={{ minHeight: 200 }}>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Nav />
         <Hero />
         <About />
