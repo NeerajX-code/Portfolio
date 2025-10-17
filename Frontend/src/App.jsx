@@ -16,7 +16,7 @@ function App() {
   // Memoize static resume download URL so it's stable across renders
   const resumeUrl = useMemo(
     () =>
-      "https://drive.google.com/file/d/1R5enAY8gg8VY9bCaeaf0WmlVGvBNd2QF/view?usp=sharing",
+      "https://drive.google.com/file/d/1qKlCTeRJ7wOckd-6PC5CGIPwbjU6ZBX6/view?usp=sharing",
     []
   );
 
