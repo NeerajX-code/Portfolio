@@ -5,6 +5,7 @@ import JourneyTimeline from "./Journey";
 
 function About() {
   return (
+    //This is the About Me section with profile picture, description, and skills
     <section id="about" className="about_wrapper">
       <section className="about">
 
